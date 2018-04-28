@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewData["Title"] = "GetPaymentsViewModel";
+}
+@using RestauranForManager.ViewModels
+@model PaymentsViewModel
+
+<div class="payment row">
+    <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="box">
+            <div><span class="name_of_box">Operations number</span></div>
+            <div class="information">
+                <div class="first">
+                    <span><img src="~/images/credit-card.png" /></span>
+                    <span class="text">@Model.NumberPaidByCard</span>
+                </div>
+                <div class="second">
+                    <span><img src="~/images/wallet.png" /></span>
+                    <span class="text">@Model.NumberPaidByWallet</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="box">
+            <div><span class="name_of_box">Amount of money</span></div>
+            <div class="information">
+                <div class="first">
+                    <span><img src="~/images/credit-card.png" /></span>
+                    <span class="text">$@Model.AmountMoneyPaidCard.ToString(".00")</span>
+                </div>
+                <div class="second">
+                    <span><img src="~/images/wallet.png" /></span>
+                    <span class="text">$@Model.AmountMoneyPaidByWallet.ToString(".00")</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="tips row">
+    <div class="box_tips">
+        <div><span>Tips average</span></div>
+        <div class="value">
+            <span><img src="~/images/tag.png" /></span>
+            <span class="text1">@Model.TipsAverage.ToString(".00")</span>
+            <span class="text2">%</span>
+        </div>
+    </div>
+    <div class="box_tips">
+        <div><span>Tips numbers</span></div>
+        <div class="value">
+            <span class="text3">@Model.TipsNumbers</span>
+        </div>
+    </div>
+    <div class="box_tips">
+        <div><span>Tips sum</span></div>
+        <div class="value">
+            <span class="text4">$@Model.TipsSum.ToString(".00")</span>
+        </div>
+    </div>
+</div>

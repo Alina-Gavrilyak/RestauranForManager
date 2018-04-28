@@ -1,0 +1,64 @@
+﻿@using RestauranForManager.ViewModels
+@model FoodViewModel
+
+<div class="caption2"><h1>Food</h1></div>
+<div class="good_orders">
+    <span>Top Orders</span>
+    <div class="list_orders">
+        @foreach (FoodViewModel item in Model.TopOrders)
+        {
+            <div class="conteiner_order">
+                <div class="order">
+                    <img src="~/images/@item.OrderItems.Media">
+                    <div class="information_about_order1">
+                        <div class="name_dish">
+                            <span>@item.OrderItems.Name</span>
+                            <br />
+                            <span>$@item.OrderItems.Price.ToString(".00")</span>
+                        </div>
+                        <div class="values_of_order">
+                            <div class="first">
+                                <span><img src="~/images/dinner.png" /></span>
+                                <span class="price_all_orders">@item.NumberOreders</span>
+                            </div>
+                            <div class="second">
+                                <span><img src="~/images/check.png" /></span>
+                                <span class="price_all_orders">@item.AmountPrice.ToString(".00")</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<div class="bad_orders">
+    <span>Unordered</span>
+    <div class="list_orders">
+        @foreach (FoodViewModel item in Model.Unordered)
+        {
+            <div class="conteiner_order">
+                <div class="order">
+                    <img src="~/images/@item.OrderItems.Media">
+                    <div class="information_about_order2">
+                        <div class="name_dish">
+                            <span class="name_of_dish">@item.OrderItems.Name</span>
+                            <br />
+                            <span class="price">$@item.OrderItems.Price.ToString(".00")</span>
+                        </div>
+                        <div class="values_of_order">
+                            <div class="first">
+                                <span><img src="~/images/dinner.png" /></span>
+                                <span class="price_all_orders">@item.NumberOreders</span>
+                            </div>
+                            <div class="second">
+                                <span><img src="~/images/check.png" /></span>
+                                <span class="price_all_orders">@item.AmountPrice.ToString(".00")</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

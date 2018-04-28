@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "GetChartViewModel";
+}
+@using RestauranForManager.ViewModels
+@model ChartViewModel
+
+@for (int i = 0; i < Model.PeriodNames.Count(); i++)
+{
+    <div class="column">
+        <div class="filling" style="height:@Model.FillPercentages[i]"></div>
+        <div class="value">
+            @Model.Counts[i]
+        </div>
+        <div class="names">
+            @Model.PeriodNames[i]
+        </div>
+    </div>
+}

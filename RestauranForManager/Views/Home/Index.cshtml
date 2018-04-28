@@ -1,0 +1,128 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@using RestauranForManager.ViewModels
+@model OrdersViewModel
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<link href="~/css/index.css" rel="stylesheet" />
+<script src="~/js/jquery.unobtrusive-ajax.js"></script>
+
+
+<div class="conteiner">
+    <div class="btnLogout">
+        <form asp-controller="Account" asp-action="Logout" method="POST">
+            <button type="submit" class="btn_exit btn btn-danger btn-block">Exit</button>
+        </form>
+    </div>
+    <div class="caption1"><h1>Orders</h1></div>
+    <div class="orders row">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="box_check">
+                <div><span class="name_of_box">Average check</span></div>
+                <div class="information">
+                    <span><img src="~/images/check.png" /></span>
+                    <span class="text">$@Model.AverageCheck.ToString(".00")</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="box_check">
+                <div><span class="name_of_box">Amount money</span></div>
+                <div class="information">
+                    <span><img src="~/images/wallet.png" /></span>
+                    <span class="text">$@Model.AmountMoney.ToString(".00")</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="box_check">
+                <div><span class="name_of_box">Number of orders</span></div>
+                <div class="information">
+                    <span><img src="~/images/shopping-list.png" /></span>
+                    <span class="text">@Model.NumberOrders</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="box_check">
+                <div>
+                    <span class="name_of_box">
+                        Number of items ordered
+                    </span>
+                </div>
+                <div class="information">
+                    <span><img src="~/images/dinner.png" /></span>
+                    <span class="text">@Model.NumberItemsOrdered</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="chart">
+        <div class="head">
+            <div class="chart-title">Orders diagramm</div>
+            <form id="chart__graf" asp-controller="Home" asp-action="GetChartViewModel" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#grafic">
+                <div class="buttons">
+                    <div>
+                        <label class="radio-inline"><input type="radio" name="type" onclick="SubmitForm()" value="Orders" checked="checked">Number of orders</label>
+                        <label class="radio-inline"><input type="radio" name="type" onclick="SubmitForm()" value="Money">Money</label>
+                    </div>
+                    <div>
+                        <label class="radio-inline"><input type="radio" name="period" onclick="SubmitForm()" value="Day" checked="checked">Day</label>
+                        <label class="radio-inline"><input type="radio" name="period" onclick="SubmitForm()" value="Week">Week</label>
+                        <label class="radio-inline"><input type="radio" name="period" onclick="SubmitForm()" value="Month">Month</label>
+                        <button type="submit" value="Submit" style="display:none;" id="btnclick"></button>
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
+        <div class="chart-area row" id="grafic">
+        </div>
+    </div>
+</div>
+
+
+
+<div class="conteiner" id="listsOrders">
+
+</div>
+<div class="conteiner">
+    <div class="caption3"><h1>Payments</h1></div>
+    <div class="form" id="payments">
+
+    </div>
+</div>
+<script>
+    SubmitForm();
+    function SubmitForm() {
+        $("#btnclick").click();
+    }
+
+    $.ajax({
+        type: 'GET',
+        url: '/Home/GetFoodViewModel',
+        success: function (data, textstatus) {
+            if (data != '') {
+                $("#listsOrders").html("");
+                $("#listsOrders").append(data);
+            }
+
+        }
+    });
+
+    $.ajax({
+        type: 'GET',
+        url: '/Home/GetPaymentsViewModel',
+        success: function (data, textstatus) {
+            if (data != '') {
+                $("#payments").html("");
+                $("#payments").append(data);
+            }
+
+        }
+    });
+
+</script>
+

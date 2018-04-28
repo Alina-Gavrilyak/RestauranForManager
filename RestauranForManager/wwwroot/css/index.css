@@ -1,0 +1,277 @@
+﻿.conteiner {
+  font-family: Arial;
+}
+.conteiner .btnLogout {
+  position: fixed;
+  top: 10px;
+  right: 400px;
+}
+.conteiner .btnLogout .btn_exit {
+  width: 100px;
+  background-color: gray;
+  border-color: gray;
+}
+.conteiner .caption1 {
+  margin-top: 50px;
+}
+.conteiner .caption1 h1 {
+  font-size: 50px;
+  font-weight: bolder;
+  color: #01d1ff;
+}
+.conteiner .box_check {
+  background-color: #01d1ff;
+  width: auto;
+  height: 100px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.conteiner .box_check .name_of_box {
+  font-size: 20px;
+}
+.conteiner .box_check .information {
+  float: right;
+}
+.conteiner .box_check .information .text {
+  margin-left: 10px;
+}
+.conteiner .box_check .information img {
+  vertical-align: baseline;
+  width: 50px;
+}
+.conteiner .box_check .information span {
+  bottom: 0px;
+  font-size: 40px;
+  font-weight: bolder;
+  float: left;
+}
+.conteiner .chart {
+  border-top: solid #01d1ff 3px;
+}
+.conteiner .chart .head {
+  background-color: aliceblue;
+  padding: 10px;
+}
+.conteiner .chart .head .chart-title {
+  font-size: 20px;
+  float: left;
+}
+.conteiner .chart .head .buttons {
+  text-align: right;
+}
+.conteiner .chart .chart-area {
+  height: 400px;
+  margin: 0px;
+}
+.conteiner .chart .chart-area .column {
+  background-color: aliceblue;
+  width: 14.285%;
+  height: 500px;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+}
+.conteiner .chart .chart-area .column .filling {
+  background-color: #01d1ff;
+}
+.conteiner .chart .chart-area .column .value {
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+  background-color: #01d1ff;
+}
+.conteiner .chart .chart-area .column .names {
+  float: left;
+  font-weight: 700;
+  font-size: 15px;
+}
+.conteiner {
+  font-family: Arial;
+}
+.conteiner .caption2 {
+  margin-top: 200px;
+}
+.conteiner .caption2 h1 {
+  font-size: 50px;
+  font-weight: bolder;
+  color: #70bc00;
+}
+.conteiner .good_orders {
+  border-top: 5px solid #70bc00;
+}
+.conteiner .good_orders .list_orders {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.conteiner .good_orders .list_orders .conteiner_order {
+  min-width: 130px;
+  padding: 5px;
+}
+.conteiner .good_orders .list_orders .conteiner_order .order {
+  width: 130px;
+}
+.conteiner .good_orders .list_orders .conteiner_order .order img {
+  height: 130px;
+  display: block;
+  width: 130px;
+}
+.conteiner .good_orders .list_orders .conteiner_order .order .name_dish {
+  height: 60px;
+  display: block;
+}
+.conteiner .good_orders .list_orders .conteiner_order .order .information_about_order1 {
+  min-width: 130px;
+  padding: 10px;
+  background-color: #70bc00;
+}
+.conteiner .good_orders .list_orders .conteiner_order .order .information_about_order1 .first,
+.conteiner .good_orders .list_orders .conteiner_order .order .information_about_order1 .second {
+  min-width: 160px;
+}
+.conteiner .good_orders .list_orders .conteiner_order .order .information_about_order1 .first .price_all_orders,
+.conteiner .good_orders .list_orders .conteiner_order .order .information_about_order1 .second .price_all_orders {
+  margin-left: 5px;
+}
+.conteiner .good_orders .list_orders .conteiner_order .order .information_about_order1 .first img,
+.conteiner .good_orders .list_orders .conteiner_order .order .information_about_order1 .second img {
+  width: 20px;
+  height: auto;
+  display: inline;
+}
+.conteiner .good_orders .list_orders .conteiner_order .order .information_about_order1 .first span,
+.conteiner .good_orders .list_orders .conteiner_order .order .information_about_order1 .second span {
+  color: white;
+  font-size: 20px;
+}
+.conteiner .bad_orders {
+  margin-top: 20px;
+  border-top: 5px solid #f82838;
+}
+.conteiner .bad_orders .list_orders {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.conteiner .bad_orders .list_orders .conteiner_order {
+  min-width: 130px;
+  padding: 5px;
+}
+.conteiner .bad_orders .list_orders .conteiner_order .order {
+  width: 130px;
+}
+.conteiner .bad_orders .list_orders .conteiner_order .order img {
+  height: 130px;
+  display: block;
+  width: 130px;
+}
+.conteiner .bad_orders .list_orders .conteiner_order .order .name_dish {
+  height: 60px;
+  display: block;
+  color: white;
+}
+.conteiner .bad_orders .list_orders .conteiner_order .order .information_about_order2 {
+  min-width: 130px;
+  padding: 10px;
+  background-color: #f82838;
+}
+.conteiner .bad_orders .list_orders .conteiner_order .order .information_about_order2 .first .price_all_orders,
+.conteiner .bad_orders .list_orders .conteiner_order .order .information_about_order2 .second .price_all_orders {
+  margin-left: 5px;
+}
+.conteiner .bad_orders .list_orders .conteiner_order .order .information_about_order2 .first img,
+.conteiner .bad_orders .list_orders .conteiner_order .order .information_about_order2 .second img {
+  width: 20px;
+  height: auto;
+  display: inline;
+}
+.conteiner .bad_orders .list_orders .conteiner_order .order .information_about_order2 .first span,
+.conteiner .bad_orders .list_orders .conteiner_order .order .information_about_order2 .second span {
+  color: white;
+  font-size: 20px;
+}
+.conteiner {
+  margin-top: 10px;
+  font-family: Arial;
+}
+.conteiner .caption3 {
+  margin-top: 100px;
+}
+.conteiner .caption3 h1 {
+  font-size: 50px;
+  font-weight: bolder;
+  color: #CDF000;
+}
+.conteiner .form .payment .box {
+  padding: 10px;
+  background-color: #CDF000;
+  width: auto;
+  height: 150px;
+  margin-bottom: 20px;
+}
+.conteiner .form .payment .box .name_of_box {
+  font-size: 20px;
+}
+.conteiner .form .payment .box .information {
+  width: 100%;
+  padding: 10px;
+  float: left;
+}
+.conteiner .form .payment .box .information .first,
+.conteiner .form .payment .box .information .second {
+  width: 100%;
+}
+.conteiner .form .payment .box .information .first .text,
+.conteiner .form .payment .box .information .second .text {
+  margin-left: 10px;
+}
+.conteiner .form .payment .box .information .first img,
+.conteiner .form .payment .box .information .second img {
+  vertical-align: baseline;
+  width: 30px;
+  height: auto;
+}
+.conteiner .form .payment .box .information .first span,
+.conteiner .form .payment .box .information .second span {
+  font-size: 30px;
+  font-weight: bolder;
+}
+.conteiner .form .tips {
+  margin-left: 2px;
+  width: 57%;
+}
+.conteiner .form .tips .box_tips {
+  font-size: 20px;
+  border-top: 5px solid #CDF000;
+  height: 150px;
+  vertical-align: middle;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.conteiner .form .tips .box_tips .value {
+  float: right;
+}
+.conteiner .form .tips .box_tips .value img {
+  vertical-align: baseline;
+  width: 70px;
+  height: auto;
+}
+.conteiner .form .tips .box_tips .value .text1 {
+  font-size: 60px;
+  font-weight: bolder;
+}
+.conteiner .form .tips .box_tips .value .text2 {
+  font-size: 20px;
+}
+.conteiner .form .tips .box_tips .value .text3 {
+  font-size: 50px;
+  font-weight: bolder;
+}
+.conteiner .form .tips .box_tips .value .text4 {
+  font-size: 40px;
+  font-weight: bolder;
+}
